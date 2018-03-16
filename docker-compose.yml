@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+    app:
+        build: .
+        restart: always
+        networks:
+            - web
+        container_name: app
+        labels:
+            - "traefik.backend=app"
+            - "traefik.docker.network=web"
+            - "traefik.frontend.rule=Host:app.mr-robot.sh"
+            - "traefik.enable=true"
+            - "traefik.port=80"
+networks:
+  web:
+    external: true
