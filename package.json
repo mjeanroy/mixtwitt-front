@@ -12,7 +12,8 @@
     "lint": "gulp lint",
     "start": "gulp start",
     "watch": "gulp watch",
-    "build": "gulp build"
+    "build": "gulp build",
+    "dependency:check": "gulp retire"
   },
   "dependencies": {
     "angular": "1.6.9",
@@ -32,6 +33,8 @@
     "fs-extra": "5.0.0",
     "gulp": "3.9.1",
     "gulp-eslint": "4.0.2",
+    "gulp-util": "3.0.8",
+    "retire": "1.6.0",
     "rollup": "0.56.5",
     "rollup-plugin-babel": "3.0.3",
     "rollup-plugin-commonjs": "9.0.0",

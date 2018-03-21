@@ -7,6 +7,8 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const log = require('fancy-log');
 const colors = require('ansi-colors');
+const spawn = require('child_process').spawn;
+const gutil = require('gulp-util');
 
 const pkg = require('./package.json');
 const rollupConfig = require('./rollup.config');
@@ -66,4 +68,21 @@ gulp.task('start', () => {
       baseDir: path.join(__dirname, 'src'),
     },
   });
+});
+
+gulp.task('retire', function() {
+    // Spawn Retire.js as a child process
+    // You can optionally add option parameters to the second argument (array)
+    let child = spawn('retire', [], {cwd: process.cwd()});
+
+    child.stdout.setEncoding('utf8');
+    child.stdout.on('data', function(data) {
+        gutil.log(data);
+    });
+
+    child.stderr.setEncoding('utf8');
+    child.stderr.on('data', function(data) {
+        gutil.log(gutil.colors.red(data));
+        gutil.beep();
+    });
 });
