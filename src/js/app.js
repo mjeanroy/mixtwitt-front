@@ -1,6 +1,13 @@
 import 'jquery';
+
 import angular from 'angular';
+import 'angular-route';
+
+import {routingModule} from './routing/index';
+import {securityModule} from './security/index';
+import {loginModule} from './login/index';
 import {tweetModule} from './tweet/index';
 
-angular.module('mixtwitt', [tweetModule.name])
+angular
+  .module('mixtwitt', [routingModule.name, securityModule.name, loginModule.name, tweetModule.name])
   .value('API', 'http://localhost:8080');

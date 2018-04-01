@@ -1,5 +1,5 @@
 export class TweetsService {
-  constructor(API, $http) {
+  constructor($http, API) {
     this.endpoint = `${API}/api/tweets`;
     this.$http = $http;
   }
@@ -16,3 +16,8 @@ export class TweetsService {
     ));
   }
 }
+
+TweetsService.$inject = [
+  '$http',
+  'API',
+];

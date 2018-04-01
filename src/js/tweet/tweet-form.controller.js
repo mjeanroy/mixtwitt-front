@@ -15,3 +15,6 @@ export class TweetFormController {
     };
   }
 }
+
+TweetFormController.$inject = [
+];

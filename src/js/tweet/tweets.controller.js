@@ -12,8 +12,12 @@ export class TweetsController {
 
   submit(tweet) {
     this.tweetsService.save(tweet)
-      .then(() => {
-        this.tweets = this.tweets.concat(tweet);
+      .then((result) => {
+        this.tweets = this.tweets.concat(result);
       });
   }
 }
+
+TweetsController.$inject = [
+  'tweetsService',
+];
