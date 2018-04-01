@@ -15,7 +15,6 @@ export class LoginController {
   }
 
   submit() {
-    debugger;
     this.loginService.login(this.login, this.password).then(() => {
       this._redirect();
     });
