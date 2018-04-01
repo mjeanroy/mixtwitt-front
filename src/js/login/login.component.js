@@ -11,7 +11,7 @@ export const loginComponent = {
         '<label for="inputPassword">Password</label>' +
         '<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="$ctrl.password" required>' +
       '</div>' +
-      '<button type="submit" class="btn btn-default">Submit</button>' +
+      '<button type="submit" class="btn btn-primary">Submit</button>' +
     '</form>',
 
   controller: LoginController,

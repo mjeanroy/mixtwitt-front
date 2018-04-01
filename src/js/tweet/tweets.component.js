@@ -4,8 +4,8 @@ export const tweetsComponent = {
   template:
     '<tweet-form on-submit="$ctrl.submit(tweet)"></tweet-form>' +
     '<div>' +
-      '<div class="panel panel-default">' +
-        '<div class="panel-body" ng-repeat="tweet in $ctrl.tweets | orderBy:\'-id\'">' +
+      '<div class="card">' +
+        '<div class="card-body" ng-repeat="tweet in $ctrl.tweets | orderBy:\'-id\'">' +
           '<tweet tweet="tweet"></tweet>' +
         '</div>' +
       '</div>' +
