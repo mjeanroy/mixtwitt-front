@@ -1,4 +1,4 @@
-export function routesConfiguration($routeProvider) {
+export function routesConfiguration($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
       template: '<tweets></tweets>',
@@ -12,8 +12,12 @@ export function routesConfiguration($routeProvider) {
     .otherwise({
       redirectTo: '/',
     });
+
+  // use the HTML5 History API
+  $locationProvider.html5Mode(true);
 }
 
 routesConfiguration.$inject = [
   '$routeProvider',
+  '$locationProvider',
 ];
