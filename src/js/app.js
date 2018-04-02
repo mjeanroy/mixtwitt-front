@@ -2,6 +2,7 @@ import './jq';
 
 import angular from 'angular';
 import 'angular-route';
+import 'angular-sanitize';
 
 import {routingModule} from './routing/index';
 import {menuModule} from './menu/index';

@@ -1,14 +1,12 @@
 export class TweetController {
-  constructor($sce) {
-    this.$sce = $sce;
+  constructor() {
   }
 
   $onInit() {
     this.login = this.tweet.login;
-    this.message = this.$sce.trustAsHtml(this.tweet.message);
+    this.message = this.tweet.message;
   }
 }
 
 TweetController.$inject = [
-  '$sce',
 ];
