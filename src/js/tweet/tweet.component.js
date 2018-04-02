@@ -1,10 +1,14 @@
+import {TweetController} from './tweet.controller';
+
 export const tweetComponent = {
   template:
     '<div>' +
-      '<span class="label label-primary">{{ ::$ctrl.tweet.login | tweetAccount }}</span>' +
+      '<span class="label label-primary">{{ ::$ctrl.login | tweetAccount }}</span>' +
       '&nbsp;' +
-      '<span>{{ ::$ctrl.tweet.message }}</span>' +
+      '<span ng-bind-html="::$ctrl.message"></span>' +
     '</div>',
+
+  controller: TweetController,
 
   bindings: {
     tweet: '<',
