@@ -1,3 +1,3 @@
-FROM registry.mr-robot.sh/apache:v1.0
+FROM registry.mr-robot.sh/front-baseimage:latest
 
-COPY ./src/ /var/www
+COPY ./src/ /var/www/html
