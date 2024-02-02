@@ -15,7 +15,7 @@
     "build": "gulp build"
   },
   "dependencies": {
-    "angular": "1.6.9",
+    "angular": "1.8.3",
     "angular-route": "1.6.9",
     "bootstrap": "3.3.7",
     "jquery": "1.12.4"
